@@ -9,6 +9,9 @@
     	<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- The main CSS file -->
 		<link href="css/style.css" rel="stylesheet" />
+		<!-- The Google map picker -->
+		<link rel="stylesheet" type="text/css" href="css/jquery-gmaps-latlon-picker.css" />
+		<script src="js/jquery-gmaps-latlon-picker.js"></script>
 
 	</head>
 
@@ -24,6 +27,15 @@
 			
 			<noscript><div>JavaScript is disabled or not supported in your browser.  To use this site, please use a JavaScript enbled browser.</div></noscript>
 			
+			<fieldset class="gllpLatlonPicker">
+				<input type="text" class="gllpSearchField" />
+				<input type="button" class="gllpSearchButton" value="search" /><br/>
+				<div class="gllpMap">Google Maps</div>
+				<label>lat./long.<input type="hidden" class="gllpLatitude" value="20" /></label><input type="hidden" class="gllpLongitude" value="20" /> 
+				<label>zoom: <input type="hidden" class="gllpZoom" value="3" /></label>
+				<button type"button" class="gllpUpdateButton">update map</button>
+			</fieldset>
+			
 			<div class="input-group">
 				<input type="text" class="form-control" ng-model="search" ng-change="change()" onclick="select()" placeholder="Enter a ZIPCode" />
 				<span class="input-group-addon"><i class="glyphicon-search"></i></span>
@@ -34,7 +46,8 @@
 		</div>
 
 		<!-- Libraries -->
-		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	
