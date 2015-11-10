@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="tidesApp" ng-controller="TidesController">
+	<head>
+		<meta charset="utf-8" />
+		<title>TidesFinder</title>
+		<!-- Google web fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<!-- Bootstrap -->
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- The main CSS file -->
+		<link href="css/style.css" rel="stylesheet" />
+
+	</head>
+
+	<body >
+
+		<div class="container-fluid">
+			
+			<nav class="navbar navbar-inverse">
+				<div class="navbar-header">
+					<span class="navbar-brand">Tide Information</span>
+				</div>
+			</nav>
+			
+			<noscript><div>JavaScript is disabled or not supported in your browser.  To use this site, please use a JavaScript enbled browser.</div></noscript>
+			
+			<div class="input-group">
+				<input type="text" class="form-control" ng-model="search" ng-change="change()" onclick="select()" placeholder="Enter a ZIPCode" />
+				<span class="input-group-addon"><i class="glyphicon-search"></i></span>
+			</div>
+			
+			<div class="tide-output col-md-10" ng-include="'includes/tide-output.html'"></div>
+			
+		</div>
+
+		<!-- Libraries -->
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	
+		<!-- Application -->
+		<script src="js/app.js"></script>
+
+	</body>
+</html>
